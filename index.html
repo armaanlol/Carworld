@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carworld International - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cw-blue': '#152473', 
+                        'cw-red': '#DC2626', 
+                        'cw-dark': '#0F172A', 
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+        .logo-top { font-family: 'Bebas Neue', sans-serif; letter-spacing: 4px; font-size: 1.8rem; line-height: 1; }
+        .logo-bottom { font-family: 'Bebas Neue', sans-serif; letter-spacing: 5px; font-size: 0.8rem; line-height: 1; margin-top: 1px; }
+        @media (min-width: 768px) {
+            .logo-top { letter-spacing: 5px; font-size: 2.375rem; }
+            .logo-bottom { letter-spacing: 7px; font-size: 1rem; margin-top: 2px; }
+        }
+        .car-image-container { 
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+        .car-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-white text-cw-dark">
+
+    <nav class="bg-cw-blue shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="logo-stack text-white flex flex-col items-start transition hover:text-cw-red">
+                <span class="logo-top font-extrabold">CARWORLD</span>
+                <span class="logo-bottom text-gray-300">INTERNATIONAL <span class="text-xs ml-2 align-top text-cw-red font-normal">Estd. 1993</span></span>
+            </a>
+            <button id="mobile-menu-toggle" class="md:hidden text-white text-2xl hover:text-cw-red">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="hidden md:flex space-x-10 font-medium">
+                <li><a href="index.html" class="text-white hover:text-cw-red pb-1 border-b-2 border-cw-red transition">Home</a></li>
+                <li><a href="inventory.html" class="text-white hover:text-cw-red pb-1 border-b-2 border-transparent transition">Inventory</a></li>
+                <li><a href="#contact" class="text-white hover:text-cw-red pb-1 border-b-2 border-transparent transition">Contact</a></li>
+            </ul>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-cw-blue pb-4">
+            <ul class="flex flex-col space-y-2 px-6 font-medium">
+                <li><a href="index.html" class="block text-cw-red py-2 border-b border-cw-red/50">Home</a></li>
+                <li><a href="inventory.html" class="block text-white hover:text-cw-red py-2 transition">Inventory</a></li>
+                <li><a href="#contact" class="block text-white hover:text-cw-red py-2 transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="relative h-[80vh] bg-cover bg-center" style="background-image: url('images/CW-Main.jpg');">
+        <div class="absolute inset-0 bg-cw-dark/60 flex items-center justify-center">
+            <div class="text-center text-white px-6">
+                <h1 class="logo-top text-6xl md:text-8xl font-extrabold mb-4 shadow-text-lg">CARWORLD INTERNATIONAL</h1>
+                <p class="logo-bottom text-xl md:text-3xl font-medium mb-8">Specializing in Premium Car Imports since 1993.</p>
+                <a href="inventory.html" class="bg-cw-red hover:bg-cw-blue text-white text-xl font-bold py-3 px-10 rounded-full transition duration-300 shadow-xl transform hover:scale-105">
+                    View Our Current Stock
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-cw-dark mb-4 border-b-4 border-cw-red/50 inline-block pb-2">
+                Our Heritage
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+                With over three decades of experience, Carworld International is your trusted partner for premium automotive imports.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg">
+                    <i class="fas fa-certificate text-5xl text-cw-red mb-4"></i>
+                    <h3 class="text-xl font-bold text-cw-blue mb-2">Quality Assured</h3>
+                    <p class="text-gray-700">Every vehicle is hand-selected and rigorously inspected for the highest standards.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg">
+                    <i class="fas fa-globe-americas text-5xl text-cw-red mb-4"></i>
+                    <h3 class="text-xl font-bold text-cw-blue mb-2">Global Sourcing</h3>
+                    <p class="text-gray-700">Direct imports from Japan, the UK, and Europe, ensuring the best specifications.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg">
+                    <i class="fas fa-handshake text-5xl text-cw-red mb-4"></i>
+                    <h3 class="text-xl font-bold text-cw-blue mb-2">Customer Trust</h3>
+                    <p class="text-gray-700">Building lasting relationships with transparent service since 1993.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-cw-dark mb-4 border-b-4 border-cw-red/50 inline-block pb-2">
+                Featured Inventory
+            </h2>
+            <p class="text-xl text-gray-600 mb-10">
+                A showcase of our latest and most exclusive arrivals.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/mercedes-s350-main.jpg" alt="Mercedes Benz S350">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2012 Mercedes Benz S350</h3>
+                        <p class="text-gray-600 text-sm mb-3">Flagship luxury, UK Import</p>
+                        
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>11,500 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>3.5L V6 Petrol</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Pearl White</span>
+                            </p>
+                        </div>
+                        <a href="car-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/bmw-740le-main.jpg" alt="BMW 740Le M Sport">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2018 BMW 740Le M Sport</h3>
+                        <p class="text-gray-600 text-sm mb-3">Executive long-wheelbase hybrid</p>
+                        
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>40,000 KM</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>2.0L Turbo Hybrid</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Metallic Black</span>
+                            </p>
+                        </div>
+                        <a href="bmw740le-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/porsche-macan4s-main.jpg" alt="Porsche Macan 4S">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2025 Porsche Macan 4S</h3>
+                        <p class="text-gray-600 text-sm mb-3">Brand new electric SUV, direct UK import</p>
+                        
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>0 KM (Brand New)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Powertrain:</span> 
+                                <span>All-Electric AWD (402 HP)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Metallic Black</span>
+                            </p>
+                        </div>
+                        <a href="macan4s-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/bmw-m760li-main.jpg" alt="BMW M760Li V12">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2017 BMW M760Li V12</h3>
+                        <p class="text-gray-600 text-sm mb-3">Twin-turbo V12 performance sedan</p>
+                        
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>15,000 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>6.6L Twin-Turbo V12 (600 HP)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Metallic Gray</span>
+                            </p>
+                        </div>
+                        <a href="bmwm760li-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="inventory.html" class="bg-cw-blue hover:bg-cw-red text-white text-lg font-bold py-3 px-8 rounded-full transition duration-300 shadow-md">
+                    See All Cars in Inventory
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-cw-dark mb-8 border-b-4 border-cw-red/50 inline-block pb-2">
+                Contact Us
+            </h2>
+            <div class="space-y-4 text-lg">
+                <p class="text-gray-700 mb-6 text-lg">
+                    We are available for private viewings and consultations. Please contact us to schedule an appointment.
+                </p>
+                <p class="flex items-center text-cw-dark">
+                    <i class="fas fa-envelope text-cw-red mr-3"></i> 
+                    Email: carworldinternational@gmail.com
+                </p>
+                <p class="flex items-center text-cw-dark">
+                    <i class="fab fa-instagram text-cw-red mr-3"></i> 
+                    Instagram: @carworldintl
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-cw-dark text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="logo-stack text-white flex flex-col items-start mb-4">
+                        <span class="logo-top font-extrabold text-2xl">CARWORLD</span>
+                        <span class="logo-bottom text-gray-500 text-sm">INTERNATIONAL</span>
+                    </div>
+                    <p class="text-sm text-gray-500">
+                        Sourcing the world's finest automobiles for our distinguished clientele.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="text-gray-400 hover:text-cw-red transition">Home</a></li>
+                        <li><a href="inventory.html" class="text-gray-400 hover:text-cw-red transition">Full Inventory</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-cw-red transition">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-cw-red transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Featured Cars</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="car-detail.html" class="text-gray-400 hover:text-cw-red transition">Mercedes S350</a></li>
+                        <li><a href="bmw740le-detail.html" class="text-gray-400 hover:text-cw-red transition">BMW 740Le M Sport</a></li>
+                        <li><a href="macan4s-detail.html" class="text-gray-400 hover:text-cw-red transition">Porsche Macan 4S</a></li>
+                        <li><a href="bmwm760li-detail.html" class="text-gray-400 hover:text-cw-red transition">BMW M760Li V12</a></li>
+                        <li><a href="rangerover-p400e-detail.html" class="text-gray-400 hover:text-cw-red transition">Range Rover P400e LWB</a></li>
+                        <li><a href="taycan-darkgray-detail.html" class="text-gray-400 hover:text-cw-red transition">Porsche Taycan Dark Gray</a></li>
+                        <li><a href="taycan-red-detail.html" class="text-gray-400 hover:text-cw-red transition">Porsche Taycan Red</a></li>
+                        <li><a href="etron-gt-detail.html" class="text-gray-400 hover:text-cw-red transition">Audi e-tron GT</a></li>
+                        <li><a href="r1250gs-detail.html" class="text-gray-400 hover:text-cw-red transition">BMW R1250 GS Adventure</a></li>
+                        <li><a href="r18classic-detail.html" class="text-gray-400 hover:text-cw-red transition">BMW R18 Classic</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-cw-red transition text-2xl"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://www.instagram.com/carworldintl" target="_blank" class="text-gray-400 hover:text-cw-red transition text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-cw-red transition text-2xl"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-800 text-center text-xs text-gray-600">
+                &copy; 2024 Carworld International. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carworld International - 2018 BMW M760Li V12</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cw-blue': '#152473', 
+                        'cw-red': '#DC2626', 
+                        'cw-dark': '#0F172A', 
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+        .logo-top { font-family: 'Bebas Neue', sans-serif; letter-spacing: 4px; font-size: 1.8rem; line-height: 1; }
+        .logo-bottom { font-family: 'Bebas Neue', sans-serif; letter-spacing: 5px; font-size: 0.8rem; line-height: 1; margin-top: 1px; }
+        @media (min-width: 768px) {
+            .logo-top { letter-spacing: 5px; font-size: 2.375rem; }
+            .logo-bottom { letter-spacing: 7px; font-size: 1rem; margin-top: 2px; }
+        }
+        .main-car-display {
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+        .main-car-display img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-white text-cw-dark">
+
+    <nav class="bg-cw-blue shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="logo-stack text-white flex flex-col items-start transition hover:text-cw-red">
+                <span class="logo-top font-extrabold">CARWORLD</span>
+                <span class="logo-bottom text-gray-300">INTERNATIONAL <span class="text-xs ml-2 align-top text-cw-red font-normal">Estd. 1993</span></span>
+            </a>
+            <button id="mobile-menu-toggle" class="md:hidden text-white text-2xl hover:text-cw-red">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="hidden md:flex space-x-10 font-medium">
+                <li><a href="index.html" class="text-white hover:text-cw-red pb-1 border-b-2 border-transparent transition">Home</a></li>
+                <li><a href="inventory.html" class="text-white hover:text-cw-red pb-1 border-b-2 border-cw-red transition">Inventory</a></li>
+                <li><a href="index.html#contact" class="text-white hover:text-cw-red pb-1 border-b-2 border-transparent transition">Contact</a></li>
+            </ul>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-cw-blue pb-4">
+            <ul class="flex flex-col space-y-2 px-6 font-medium">
+                <li><a href="index.html" class="block text-white hover:text-cw-red py-2 transition">Home</a></li>
+                <li><a href="inventory.html" class="block text-cw-red py-2 border-b border-cw-red/50">Inventory</a></li>
+                <li><a href="index.html#contact" class="block text-white hover:text-cw-red py-2 transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <a href="inventory.html" class="inline-flex items-center text-cw-blue hover:text-cw-red transition mb-4 text-base font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Full Inventory
+            </a>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-cw-dark mb-2">2018 BMW M760Li V12</h1>
+            <p class="text-xl text-gray-600 mb-8">The ultimate V12 luxury sedan, UK Import, 15,000 Miles</p>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <div>
+                    <div class="main-car-display relative rounded-xl shadow-2xl mb-4">
+                        <img id="main-car-image" src="images/bmwm760li-1.jpg" alt="BMW M760Li V12 Exterior Front" class="w-full h-full object-cover transition duration-300 cursor-zoom-in">
+
+                        <button id="prev-image" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-cw-blue/70 text-white p-3 rounded-full hover:bg-cw-blue transition z-10">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="next-image" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-cw-blue/70 text-white p-3 rounded-full hover:bg-cw-blue transition z-10">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="grid grid-cols-5 gap-3">
+                        <img src="images/bmwm760li-1.jpg" class="thumbnail h-16 w-full object-cover rounded cursor-pointer border-2 border-cw-blue/50 hover:border-cw-blue transition">
+                        <img src="images/bmwm760li-2.jpg" class="thumbnail h-16 w-full object-cover rounded cursor-pointer hover:border-2 hover:border-cw-blue transition">
+                        <img src="images/bmwm760li-3.jpg" class="thumbnail h-16 w-full object-cover rounded cursor-pointer hover:border-2 hover:border-cw-blue transition">
+                        <img src="images/bmwm760li-4.jpg" class="thumbnail h-16 w-full object-cover rounded cursor-pointer hover:border-2 hover:border-cw-blue transition">
+                        <img src="images/bmwm760li-5.jpg" class="thumbnail h-16 w-full object-cover rounded cursor-pointer hover:border-2 hover:border-cw-blue transition">
+                        <img src="images/bmwm760li-6.jpg" class="thumbnail h-16 w-full object-cover rounded cursor-pointer hover:border-2 hover:border-cw-blue transition">
+                        <img src="images/bmwm760li-7.jpg" class="thumbnail h-16 w-full object-cover rounded cursor-pointer hover:border-2 hover:border-cw-blue transition">
+                        <img src="images/bmwm760li-8.jpg" class="thumbnail h-16 w-full object-cover rounded cursor-pointer hover:border-2 hover:border-cw-blue transition">
+                        <img src="images/bmwm760li-9.jpg" class="thumbnail h-16 w-full object-cover rounded cursor-pointer hover:border-2 hover:border-cw-blue transition">
+                        <img src="images/bmwm760li-10.jpg" class="thumbnail h-16 w-full object-cover rounded cursor-pointer hover:border-2 hover:border-cw-blue transition">
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl font-bold text-cw-red mb-6">Contact for Price</h2>
+                    
+                    <h3 class="text-2xl font-bold text-cw-blue mb-4 border-b pb-2">Key Specifications</h3>
+                    <div class="space-y-3 text-lg">
+                        <p class="flex justify-between border-b border-gray-100 pb-1">
+                            <span class="font-medium text-gray-700">Year / Model:</span> 
+                            <span>2018 / M760Li V12</span>
+                        </p>
+                        <p class="flex justify-between border-b border-gray-100 pb-1">
+                            <span class="font-medium text-gray-700">Mileage:</span> 
+                            <span>15,000 Miles</span>
+                        </p>
+                        <p class="flex justify-between border-b border-gray-100 pb-1">
+                            <span class="font-medium text-gray-700">Engine:</span> 
+                            <span>6.6L Twin-Turbo V12</span>
+                        </p>
+                        <p class="flex justify-between border-b border-gray-100 pb-1">
+                            <span class="font-medium text-gray-700">Drivetrain:</span> 
+                            <span>xDrive AWD</span>
+                        </p>
+                        <p class="flex justify-between border-b border-gray-100 pb-1">
+                            <span class="font-medium text-gray-700">Exterior Color:</span> 
+                            <span>Metallic Gray</span>
+                        </p>
+                        <p class="flex justify-between border-b border-gray-100 pb-1">
+                            <span class="font-medium text-gray-700">Import Country:</span> 
+                            <span>UK</span>
+                        </p>
+                    </div>
+
+ <span class="text-white">YouTube</span>
+
+                    <h3 class="text-2xl font-bold text-cw-blue mt-8 mb-4 border-b pb-2">Features & Highlights</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 text-base">
+                        <li>Executive Lounge Seating with Massagers</li>
+                        <li>Bowers & Wilkins Diamond Surround Sound</li>
+                        <li>V12 Exclusive Nappa Leather Interior</li>
+                        <li>Carbon Core Chassis Technology</li>
+                        <li>Rear entertainment</li>
+                        <li>Sky lounge Panoramic roof</li>
+                        <li>Ceramic Package</li>
+                    </ul>
+
+                    <a href="mailto:carworld70@yahoo.com?subject=Inquiry%20on%202018%20BMW%20M760Li%20V12" class="mt-8 block text-center bg-cw-red hover:bg-cw-dark text-white text-lg font-bold py-3 rounded-lg transition duration-300 shadow-md">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us for Price & Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black bg-opacity-95 hidden flex-col justify-center items-center p-4">
+        <button id="lightbox-close" class="absolute top-4 right-4 text-white text-4xl hover:text-cw-red z-50">&times;</button>
+        <div class="relative w-full max-w-5xl">
+            <img id="lightbox-img" src="" class="w-full h-auto max-h-[85vh] object-contain rounded shadow-lg">
+            <button id="lightbox-prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 md:-translate-x-12 text-white text-3xl md:text-5xl hover:text-cw-red p-4">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="lightbox-next" class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 md:translate-x-12 text-white text-3xl md:text-5xl hover:text-cw-red p-4">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-cw-dark text-gray-400 py-12">
+        <div class="container mx-auto px-6 mt-8 pt-6 border-t border-gray-800 text-center text-xs text-gray-600">
+            &copy; 2024 Carworld International. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

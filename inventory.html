@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carworld International - Full Inventory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cw-blue': '#152473', 
+                        'cw-red': '#DC2626', 
+                        'cw-dark': '#0F172A', 
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .logo-top { font-family: 'Bebas Neue', sans-serif; letter-spacing: 4px; font-size: 1.8rem; line-height: 1; }
+        .logo-bottom { font-family: 'Bebas Neue', sans-serif; letter-spacing: 5px; font-size: 0.8rem; line-height: 1; margin-top: 1px; }
+        @media (min-width: 768px) {
+            .logo-top { letter-spacing: 5px; font-size: 2.375rem; }
+            .logo-bottom { letter-spacing: 7px; font-size: 1rem; margin-top: 2px; }
+        }
+        .car-image-container { 
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+        .car-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-cw-dark">
+
+    <nav class="bg-cw-blue shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="logo-stack text-white flex flex-col items-start transition hover:text-cw-red">
+                <span class="logo-top font-extrabold">CARWORLD</span>
+                <span class="logo-bottom text-gray-300">INTERNATIONAL <span class="text-xs ml-2 align-top text-cw-red font-normal">Estd. 1993</span></span>
+            </a>
+            <button id="mobile-menu-toggle" class="md:hidden text-white text-2xl hover:text-cw-red">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="hidden md:flex space-x-10 font-medium">
+                <li><a href="index.html" class="text-white hover:text-cw-red pb-1 border-b-2 border-transparent transition">Home</a></li>
+                <li><a href="inventory.html" class="text-white hover:text-cw-red pb-1 border-b-2 border-cw-red transition">Inventory</a></li>
+                <li><a href="index.html#contact" class="text-white hover:text-cw-red pb-1 border-b-2 border-transparent transition">Contact</a></li>
+            </ul>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-cw-blue pb-4">
+            <ul class="flex flex-col space-y-2 px-6 font-medium">
+                <li><a href="index.html" class="block text-white hover:text-cw-red py-2 transition">Home</a></li>
+                <li><a href="inventory.html" class="block text-cw-red py-2 border-b border-cw-red/50">Inventory</a></li>
+                <li><a href="index.html#contact" class="block text-white hover:text-cw-red py-2 transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-extrabold text-cw-dark mb-4 border-b-4 border-cw-red/50 inline-block pb-2">
+                Current Inventory
+            </h1>
+            <p class="text-xl text-gray-600 mb-10">
+                All vehicles are available for private viewing by appointment.
+            </p>
+
+            <div id="inventory-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+                
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/mercedes-s350-main.jpg" alt="Mercedes Benz S350">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2012 Mercedes Benz S350</h3>
+                        <p class="text-gray-600 text-sm mb-3">Flagship luxury, UK Import</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>11,500 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>3.5L V6 Petrol</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Pearl White</span>
+                            </p>
+                        </div>
+                        <a href="car-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/bmw-740le-main.jpg" alt="BMW 740Le M Sport">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2018 BMW 740Le M Sport</h3>
+                        <p class="text-gray-600 text-sm mb-3">Executive long-wheelbase hybrid</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>40,000 KM</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>2.0L Turbo Hybrid</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Metallic Black</span>
+                            </p>
+                        </div>
+                        <a href="bmw740le-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/porsche-macan4s-main.jpg" alt="Porsche Macan 4S">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2024 Porsche Macan 4S</h3>
+                        <p class="text-gray-600 text-sm mb-3">Brand new electric SUV, direct UK import</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>0 KM (Brand New)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Powertrain:</span> 
+                                <span>All-Electric AWD (402 HP)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Metallic Black</span>
+                            </p>
+                        </div>
+                        <a href="macan4s-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/bmw-m760li-main.jpg" alt="BMW M760Li V12">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2017 BMW M760Li V12</h3>
+                        <p class="text-gray-600 text-sm mb-3">Twin-turbo V12 performance sedan</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>15,000 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>6.6L Twin-Turbo V12 (600 HP)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Metallic Gray</span>
+                            </p>
+                        </div>
+                        <a href="bmwm760li-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/fiat500e-1.jpg" alt="Fiat 500e">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2021 Fiat 500e</h3>
+                        <p class="text-gray-600 text-sm mb-3">Full electric urban hatchback, UK import</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>100 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Powertrain:</span> 
+                                <span>Full Electric (118 HP)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Gray Metallic</span>
+                            </p>
+                        </div>
+                        <a href="fiat500e-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/s580el-a-1.jpg" alt="Mercedes Benz S580eL (Dark Blue)">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2021 Mercedes-Benz S580eL</h3>
+                        <p class="text-gray-600 text-sm mb-3">Long-wheelbase Plug-in Hybrid luxury</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>9,800 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>3.0L I6 Hybrid</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Dark Blue</span>
+                            </p>
+                        </div>
+                        <a href="s580el-darkblue-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/s580el-b-1.jpg" alt="Mercedes Benz S580eL (White)">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2021 Mercedes-Benz S580eL</h3>
+                        <p class="text-gray-600 text-sm mb-3">Long-wheelbase Plug-in Hybrid luxury</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>4,415 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>3.0L I6 Hybrid</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>White</span>
+                            </p>
+                        </div>
+                        <a href="s580el-white-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/g63-1.jpg" alt="Mercedes-AMG G63">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2016 Mercedes-AMG G63</h3>
+                        <p class="text-gray-600 text-sm mb-3">Classic V8 Biturbo performance SUV</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>20,700 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>5.5L V8 Biturbo</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Obsidian Black</span>
+                            </p>
+                        </div>
+                        <a href="g63amg-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/tturbos-1.jpg" alt="Porsche Taycan Turbo S">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2021 Porsche Taycan Turbo S</h3>
+                        <p class="text-gray-600 text-sm mb-3">Flagship all-electric sedan, 616 HP</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>11,000 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Powertrain:</span> 
+                                <span>All Electric AWD (616 HP)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Jet Black Metallic</span>
+                            </p>
+                        </div>
+                        <a href="taycan-turbos-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/rrp400e-1.jpg" alt="Range Rover P400e LWB">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2019 Range Rover P400e LWB</h3>
+                        <p class="text-gray-600 text-sm mb-3">Hybrid Executive Long Wheelbase, UK Import (2024)</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>35,000 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>2.0L Turbo Hybrid</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Maroon (Tan Interior)</span>
+                            </p>
+                        </div>
+                        <a href="rangerover-p400e-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/taycandg-1.jpg" alt="Porsche Taycan Dark Gray">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2021 Porsche Taycan</h3>
+                        <p class="text-gray-600 text-sm mb-3">All-Electric Sedan, UK Import (2025)</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>N/A</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Powertrain:</span> 
+                                <span>All-Electric (402 HP)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Dark Gray (Black Interior)</span>
+                            </p>
+                        </div>
+                        <a href="taycan-darkgray-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/taycanred-1.jpg" alt="Porsche Taycan Red">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2021 Porsche Taycan</h3>
+                        <p class="text-gray-600 text-sm mb-3">All-Electric Sedan, UK Import (2025)</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>N/A</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Powertrain:</span> 
+                                <span>All-Electric (402 HP)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Red (White Interior)</span>
+                            </p>
+                        </div>
+                        <a href="taycan-red-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/etron-1.jpg" alt="Audi e-tron GT">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2021 Audi e-tron GT</h3>
+                        <p class="text-gray-600 text-sm mb-3">Electric Gran Turismo, UK Import (2024)</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>N/A</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Powertrain:</span> 
+                                <span>All-Electric (522 HP)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Tango Red (Black Interior)</span>
+                            </p>
+                        </div>
+                        <a href="etron-gt-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/r1250gs-1.jpg" alt="BMW R1250 GS Adventure">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2019 BMW R1250 GS Adventure</h3>
+                        <p class="text-gray-600 text-sm mb-3">Adventure Touring Bike, UK Import (2024)</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>585 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>1,254 cc Boxer Twin (136 hp)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>White/Blue</span>
+                            </p>
+                        </div>
+                        <a href="r1250gs-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/r18classic-1.jpg" alt="BMW R18 Classic 1st Edition">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">BMW R18 Classic 1st Edition</h3>
+                        <p class="text-gray-600 text-sm mb-3">Heritage Cruiser Motorcycle, UK Import (2024)</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>580 Miles</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>1,802 cc Boxer Twin (91 hp)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>Black</span>
+                            </p>
+                        </div>
+                        <a href="r18classic-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="car-image-container relative">
+                        <img src="images/ML63-1.jpg" alt="2008 Mercedes-Benz ML63 AMG">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-cw-blue mb-1">2008 Mercedes-Benz ML63 AMG</h3>
+                        <p class="text-gray-600 text-sm mb-3">High-performance luxury SUV, UK Import</p>
+                        <div class="space-y-1 text-xs">
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Mileage:</span> 
+                                <span>105,000 KM</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Engine:</span> 
+                                <span>6.2L V8 Petrol (503 HP)</span>
+                            </p>
+                            <p class="flex justify-between border-b border-gray-100 pb-0.5">
+                                <span class="text-gray-700">Color:</span> 
+                                <span>White</span>
+                            </p>
+                        </div>
+                        <a href="ml63-detail.html" class="mt-3 block text-center bg-cw-red hover:bg-cw-blue text-white font-bold py-1.5 text-sm rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-cw-dark text-gray-400 py-12 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="mt-8 pt-6 border-t border-gray-800 text-center text-xs text-gray-600">
+                &copy; 2024 Carworld International. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('inventory-grid');
+            const cards = Array.from(grid.children);
+            const batchSize = 5;
+            let visibleCount = batchSize;
+
+            // Create Load More Button Container
+            const btnContainer = document.createElement('div');
+            btnContainer.className = 'text-center mt-8 md:hidden'; // Hidden on Desktop (md breakpoint)
+            
+            // Create Load More Button
+            const loadMoreBtn = document.createElement('button');
+            loadMoreBtn.className = 'bg-cw-red text-white font-bold py-2 px-6 rounded hover:bg-cw-blue transition duration-300';
+            loadMoreBtn.textContent = 'Load More';
+            
+            btnContainer.appendChild(loadMoreBtn);
+            grid.parentNode.insertBefore(btnContainer, grid.nextSibling);
+
+            function updateVisibility() {
+                const isMobile = window.innerWidth < 768; // Tailwind md breakpoint
+
+                if (!isMobile) {
+                    // PC: Show everything, hide button container
+                    cards.forEach(card => card.style.display = '');
+                    btnContainer.style.display = 'none';
+                } else {
+                    // Mobile: Apply batch logic
+                    // Show button only if there are more cards to show
+                    btnContainer.style.display = visibleCount >= cards.length ? 'none' : 'block';
+                    
+                    cards.forEach((card, index) => {
+                        if (index < visibleCount) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+            }
+
+            loadMoreBtn.addEventListener('click', () => {
+                visibleCount += batchSize;
+                updateVisibility();
+            });
+
+            // Initial check
+            updateVisibility();
+
+            // Re-check on resize (in case user rotates phone or resizes browser)
+            window.addEventListener('resize', updateVisibility);
+        });
+    </script>
+</body>
+</html>
